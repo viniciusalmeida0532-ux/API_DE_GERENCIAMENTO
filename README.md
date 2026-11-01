@@ -23,6 +23,15 @@ A API ficará disponível em `http://localhost:3000`. Para executar os testes au
 npm test
 ```
 
+Por padrão, o servidor usa a porta `3000`. Para escolher outra porta, defina a variável de ambiente `PORT` antes de iniciar a API. Em PowerShell, por exemplo:
+
+```powershell
+$env:PORT=4000
+npm start
+```
+
+Nesse caso, use `http://localhost:4000` como URL base. Uma rota que não existe retorna `404 Not Found` com a mensagem `{"erro":"Rota não encontrada."}`.
+
 O armazenamento é em memória. Os pedidos são apagados quando o processo da API é reiniciado; não há banco de dados neste projeto.
 
 ## Arquitetura
